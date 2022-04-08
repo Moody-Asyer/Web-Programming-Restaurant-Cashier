@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="liveClock(); getDate()">
+    <div class="container">
+        <div class="header">
+            <div class="name">
+                <h1>🥩Imren🔥Grill🥩</h1>
+            </div> 
+        </div> 
+        <div class="content">
+            <div class="tools">
+                <div class="left_side">
+                    <div class="title">
+                        <div id="alamat">
+                            Imren Grill<br>Karl Marx Straße 75, 12043 Berlin, Germany
+                        </div>
+                    </div>
+                    <div class="kasir">
+                        <h3 class="nama_tabel">Kasir</h3>
+                        <br>
+                        <div class="table_kasir">
+                            <table id="table_1">
+                                <tr>
+                                    <th>Daftar Pesanan</th>
+                                    <th>Jumlah</th>
+                                    <th>Total</th>
+                                </tr>
+                            </table>
+                            <table id="table_2">
+                                <tr>
+                                    <th>Total bayar</th>
+                                    <td id="total">0</td>
+                                </tr>
+                            </table>
+                            <div id="kasir_notes">
+                            Pesanan sudah selesai? Tekan <i>enter</i> untuk menghitung total<br>
+                            Tekanan <i>check out</i> untuk menyelesaikan pesanan
+                            </div>  
+                        </div>    
+                    </div>
+                    <div class="input">
+                        <div class="flex">
+                            <div id="live_clock">
+                                <div id="display">
+                                    <div id="time">12:00:00 PM</div>
+                                </div> 
+                            </div>
+                            <div id="pesanan">
+                                <table>
+                                    <tr>
+                                        <td>Nama Makanan:</td>
+                                        <td><input type="text" name="makanan" id="makanan" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harga Satuan:</td>
+                                        <td><input type="number" name="harga" id="harga" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jumlah:</td>
+                                        <td><input type="number" name="jumlah" id="jumlah" /></td>
+                                    </tr>
+                                </table>
+                                <div id="button">
+                                    <button id="enter" onclick="tambahPesanan()">enter</button>
+                                    <button id="check_out" onclick="checkOut()">check out</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="right_side">
+                    <div class="title">
+                        <div id="tanggal_laporan">...</div>
+                    </div>
+                    <div class="laporan_keuangan">
+                        <table id="table_3">
+                            <tr>
+                                <th>Total Pemasukan:</th>
+                                <td id="total_masuk">0</td>
+                            </tr>
+                            <tr>
+                                <th>Transfer Bank</th>
+                                <td id="tf">0</td>
+                            </tr>
+                            <tr>
+                                <th>CASH</th>
+                                <td id="cash">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="daftar_pembelian">
+                        <h3 class="nama_tabel">Daftar Pembelian Harian</h3>
+                        <br>
+                        <table id="table_4">
+                            <tr>
+                                <th>Waktu Pembelian</th>
+                                <th>Daftar Pesanan</th>
+                                <th>Total</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>   
+        </div> 
+        <div class="footer">
+            <div class="copyright">
+                <p>© 2021 Moody Asyer.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
